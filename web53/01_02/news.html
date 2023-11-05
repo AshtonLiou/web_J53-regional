@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news.html</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./jquery/jquery.js"></script>
+    <script src="./bootstrap/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="triangleLeft"></div>
+    <div class="triangleRight"></div>
+
+    <!--navbar-->
+
+    <nav class="container">
+        <a href="home.html">Home</a>
+        <a href="news.html" style="color: black;">News</a>
+        <img src="./img/NYICFF_LOGO.png"
+            style="height: 50px; margin-left: 30px; margin-right: 30px; transform: scale(1.5);" alt="LOGO">
+        <a href="discover.html">Discover</a>
+        <a href="tickets.html">Tickets</a>
+    </nav>
+
+    <!--map-->
+
+    <div class="iconMap" id="icon1"></div>
+    <div class="iconMap" id="icon2"></div>
+    <div class="iconMap" id="icon3"></div>
+    <div class="iconMap" id="icon4"></div>
+    <div class="iconMap" id="icon5"></div>
+
+    <img src="./img/Map.jpg" alt="Map"
+        style="width: 700px; height: 500px; margin-left: calc(1920px/2 - 708px); margin-top: calc(1080px/2 - 508px/2); box-shadow: 0 0 0 10px black;position: relative; z-index: 1;">
+
+    <img id="mapImg" src="./img/Carousel1.jpg" alt="mapImg"
+        style="position: relative; width: 700px; height: 500px; margin-top: calc(1080px/2 - 508px/2); display: inline-block; box-shadow: 0 0 0 10px black;">
+    <div class="cardBackground"
+        style="top: 0; padding: 20px; width: 700px; margin-left: calc(1920px/2 - 4px); margin-top: 695px; position: absolute;">
+        <h2 id="mapH2" style="font-weight: 800;">title1</h2>
+        <P id="mapP" style="font-weight: 600;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit
+            voluptas blanditiis nesciunt, sequi odio non repudiandae numquam. Animi voluptatem consectetur assumenda
+            ratione nostrum? Accusantium, labore quae! Laborum, iste quaerat?</P>
+    </div>
+
+    <!--footer-->
+
+    <img src="./img/facebook.png" style="height: 40px; left: 1px;" class="fixed-bottom" alt="">
+    <img src="./img/google.png" style="height: 40px; left: 42px;" class="fixed-bottom" alt="">
+    <footer class="fixed-bottom text-center" style="color: #e1e1e1;">Copyright &copy; 2023 NYICFF All Rights Reserved
+    </footer>
+
+    <!--src-->
+
+    <script>
+        const data = {
+            "icon1": {
+                src: "./img/Carousel1.jpg",
+                title: "title1",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit voluptas blanditiis nesciunt, sequi odio non repudiandae numquam. Animi voluptatem consectetur assumenda ratione nostrum? Accusantium, labore quae! Laborum, iste quaerat?"
+            },
+            "icon2": {
+                src: "./img/Carousel2.jpg",
+                title: "title2",
+                text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae est et, at autem iste reprehenderit exercitationem doloribus corporis enim voluptates, provident laboriosam debitis tempora officiis commodi! Corrupti amet doloribus ducimus."
+            },
+            "icon3": {
+                src: "./img/Carousel3.jpg",
+                title: "title3",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, illum aliquid a provident omnis dicta et voluptatem fuga iure consequatur enim commodi quod alias ipsam, veritatis dolor dolores deleniti repudiandae?"
+            },
+            "icon4": {
+                src: "./img/News1.jpg",
+                title: "title4",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsa corrupti tenetur animi, vel culpa! Iure at tenetur aspernatur aliquid vel optio, ipsa reiciendis voluptatibus facilis praesentium qui, repudiandae laudantium."
+            },
+            "icon5": {
+                src: "./img/News2.jpg",
+                title: "title5",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, sint soluta? Id consectetur, quia qui harum quas aspernatur iusto, voluptatibus labore numquam consequatur earum, sit saepe et voluptate enim eius."
+            }
+        };
+
+        $.each(data, (id, info) => {
+            $("#" + id).click(() => {
+                $("#mapImg").attr("src", info.src);
+                $("#mapH2").text(info.title);
+                $("#mapP").text(info.text);
+            });
+        });
+    </script>
+</body>
+
+</html>

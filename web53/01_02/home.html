@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home.html</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jquery/jquery.js"></script>
+    <script src="./bootstrap/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="triangleLeft"></div>
+    <div class="triangleRight"></div>
+
+    <!--navbar-->
+
+    <nav class="container">
+        <a href="home.html" style="color: black;">Home</a>
+        <a href="news.html">News</a>
+        <img src="./img/NYICFF_LOGO.png" style="height: 50px; margin: 0 30px; transform: scale(1.5);" alt="LOGO">
+        <a href="discover.html">Discover</a>
+        <a href="tickets.html">Tickets</a>
+    </nav>
+
+    <!--imformation-->
+
+    <div class="container"
+        style="position: absolute; color: #4d4945; font-weight: 700; width: 500px; margin-top: 100px; margin-left: calc((1920px - 500px)/2);">
+        <h2 class="text-center display-1" style="font-weight: 900; color: #4d4945; border-style: solid hidden;">活動資訊
+        </h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ullam ex quo magni
+            doloremque facere eos maiores placeat aperiam fugit cum aliquam sunt quos, quidem dolorum! Quibusdam aliquid
+            deserunt hic?</p>
+    </div>
+
+
+    <!--slider-->
+
+    <main style="margin-top: 400px;">
+        <div id="Slider" class="slide carousel" data-ride="carousel"
+            style="width: 1000px; height: 500px; margin: 8px auto; border-radius: 5px; box-shadow: 0 0 0 10px black;">
+            <ol class="carousel-indicators">
+                <li data-target="#Slider" data-slide-to="0" class="active"></li>
+                <li data-target="#Slider" data-slide-to="1"></li>
+                <li data-target="#Slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" style="height: 100%; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);">
+                <div class="carousel-item active" data-interval="2000">
+                    <img src="./img/Carousel1.jpg" style="width: 100%; height: 500px; display: block;" alt="">
+                    <div class="carousel-caption cardBackground"
+                        style="width: 100%; margin-left: -150px; margin-bottom: -20px;">
+                        <h2 style="font-weight: 800;">title1</h2>
+                        <P style="font-weight: 600;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Excepturi, numquam porro. Adipisci, aliquid laudantium veniam laboriosam, mollitia voluptate
+                            minima odio, et inventore ducimus iusto sunt modi magnam dolorem id? Magni?</P>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="./img/Carousel2.jpg" style="width: 100%; height: 500px; display: block;" alt="">
+                    <div class="carousel-caption cardBackground"
+                        style="width: 100%; margin-left: -150px; margin-bottom: -20px;">
+                        <h2 style="font-weight: 800;">title2</h2>
+                        <P style="font-weight: 600;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Voluptatem rerum qui incidunt quasi debitis reiciendis, magni harum quam possimus sequi,
+                            quidem doloremque suscipit illum culpa architecto repellat nam ut laudantium.</P>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="./img/Carousel3.jpg" style="width: 100%; height: 500px; display: block;" alt="">
+                    <div class="carousel-caption cardBackground"
+                        style="width: 100%; margin-left: -150px; margin-bottom: -20px;">
+                        <h2 style="font-weight: 800;">title3</h2>
+                        <P style="font-weight: 600;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
+                            temporibus molestiae eum facere repellendus atque iste maiores expedita possimus. Excepturi
+                            eum molestias quia optio magni. Laborum libero vel voluptate pariatur!</P>
+                    </div>
+                </div>
+            </div>
+
+            <!--arrow-->
+
+            <button class="carousel-control-prev" data-target="#Slider" data-slide="prev"
+                style="background-color: black; width: 70px; height: 70px; margin-top: 215px; margin-left: 5px; border: 0; border-radius: 50%;">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-target="#Slider" data-slide="next"
+                style="background-color: black; width: 70px; height: 70px; margin-top: 215px; margin-right: 5px; border: 0; border-radius: 50%;">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </main>
+
+    <!--footer-->
+
+    <img src="./img/facebook.png" style="height: 40px; left: 1px;" class="fixed-bottom" alt="">
+    <img src="./img/google.png" style="height: 40px; left: 42px;" class="fixed-bottom" alt="">
+    <footer class="fixed-bottom text-center" style="color: #e1e1e1;">Copyright &copy; 2023 NYICFF All Rights Reserved
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+body{
+    max-width: 1920px;
+    max-height: 1080px;
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+    background-color: #beb9af;
+}
+.triangleLeft{
+    position: fixed;
+    border-right: 650px solid transparent;
+    border-bottom: 150px solid #4d4945;
+    bottom: 0;
+}
+.triangleLeft::before{
+    content: "";
+    position: fixed;
+    border-right: 150px solid transparent;
+    border-bottom: 400px solid #4d4945;
+    bottom: 0;
+}
+.triangleRight{
+    position: fixed;
+    border-left: 650px solid transparent;
+    border-top: 150px solid #4d4945;
+    right: 0;
+}
+.triangleRight::before{
+    content: "";
+    position: fixed;
+    border-left: 150px solid transparent;
+    border-top: 400px solid #4d4945;
+    right: 0;
+    top: 0;
+}
+.cardBackground{
+    background-color: rgba(77, 73, 69, .7);
+    backdrop-filter: blur(10px);
+    color: #e1e1e1;
+}
+
+/*navbar*/
+
+nav.container{
+	text-align: center;
+	padding: 1em;
+}
+nav.container > a{
+    position: relative;
+    color: #6e6862;
+    font: 25px "微軟正黑體";
+    font-weight: 900;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 10px;
+}
+nav.container > a:hover{
+    color: #4d4945;
+}
+nav.container > a::before,
+nav.container > a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+nav.container > a::before{
+    top: 0;
+    transform: translateY(10px);
+}
+nav.container > a::after{
+    bottom: 0;
+    transform: translateY(-10px);
+}
+nav.container > a:hover::before,
+nav.container > a:hover::after{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn{
+    color: black;
+    background-color: rgb(155, 146, 131);
+    width: 110px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+    margin-top: 10px;
+    transition: .2s;
+}
+.btn:hover{
+    box-shadow: 0 0 0 4px #fff,
+    0 0 0 8px rgb(155, 146, 131);
+}
+
+/*map_Icon*/
+
+.iconMap{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border: solid 2px #333;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+    transition: .1s;
+}
+.iconMap::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+.iconMap:hover {
+    background-color: orange;
+    transform: scale(1.5) rotate(-45deg) translateX(10px) translateY(-10px);
+    transition: .3s;
+    cursor: pointer;
+}
+#icon1{
+    margin-left: 750px;
+    margin-top: 470px;
+}
+#icon2{
+    margin-left: 350px;
+    margin-top: 400px;
+}
+#icon3{
+    margin-left: 470px;
+    margin-top: 600px;
+}
+#icon4{
+    margin-left: 580px;
+    margin-top: 550px;
+}
+#icon5{
+    margin-left: 600px;
+    margin-top: 400px;
+}
+
+/*discover_Card*/
+
+.perspectiveRight{
+    color: white;
+    width: 800px;
+    height: 400px;
+    margin-left: 600px;
+    border-radius: 30px 5px 30px 5px;
+    box-shadow: 0 5px 10px 0 black;
+    padding: .5em 1em;
+    display: inline-block;
+    transform: perspective(60px) rotateY(2deg);
+    transition-duration: .5s;
+    z-index: 100;
+}
+.perspectiveRight:hover{
+    transform: none;
+    transition-duration: 1s;
+    z-index: 200;
+}
+.perspectiveLeft{
+    color: white;
+    width:800px;
+    height:400px;
+    margin-left: 600px;
+    border-radius: 30px 5px 30px 5px;
+    box-shadow: 0 5px 10px 0 black;
+    padding: .5em 1em;
+    display: inline-block;
+    transform: perspective(60px) rotateY(-2deg);
+    transition-duration: .5s;
+    z-index: 100;
+}
+.perspectiveLeft:hover{
+    transform: none;
+    transition-duration: 1s;
+    z-index: 200;
+}
+
+/*ticketsform*/
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 100px;
+}
+.ticketform{
+    background-color: rgba(77, 73, 69, .4);
+    backdrop-filter: blur(20px);
+    width: 1000px;
+    border: 2px solid rgba(77, 73, 69, .4);
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 100px;
+}
+.newinput{
+    background-color: rgba(0, 0, 0, .2);
+    color: #e1e1e1;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    outline: none;
+    margin-top: 20px;
+    padding: 10px;
+}
+::placeholder{
+    color: #e1e1e1;
+}
